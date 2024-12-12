@@ -26,3 +26,19 @@
     text-decoration: underline;
   }
   
+  @media (max-width: 600px) {
+    .footer {
+        flex-direction: column; /* Stacks items vertically */
+        text-align: center; /* Centers text */
+        padding: 10px;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center; /* Centers content */
+        margin-bottom: 10px; /* Adds spacing */
+    }
+
+    .footer-right {
+        justify-content: center; /* Centers links */
+    }
+}

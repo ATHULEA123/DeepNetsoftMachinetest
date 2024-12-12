@@ -6,12 +6,13 @@
     color: #fff;
     padding: 20px;
     font-size: 14px;
+    gap: 10px;
   }
   
   .footer-box {
-    width: 30%;
+   max-width: 373px;
     text-align: center;
-    border: 1px solid #555;
+    border: 2px solid white;
     padding: 15px;
     border-radius: 10px;
   }
@@ -57,14 +58,14 @@
     position: relative;
     width: 30%;
     text-align: center;
-    border: 1px solid #555;
+    border: 2px solid white;
     padding: 15px;
     border-radius: 10px;
   }
   .contactlogo{
     position: absolute;
     top: -40px;
-    left: 130px;
+    left: 148px;
     width: 100px;
   }
   .icon{
@@ -78,4 +79,55 @@
   }
   .svg {
     color: #808080;
+}
+span.contents {
+  margin-left: 10px;
+  text-align: center;
+ 
+}
+@media (min-width: 768px) {
+  .footer-box, .footer_sec {
+    width: 30%; /* Three boxes side by side on medium+ screens */
+  }
+  .footer_sec{
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-section {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-box, .footer_sec {
+    width: 90%; /* Take up most of the screen width */
+  }
+
+  .social_links {
+    gap: 15px; /* Slightly larger gaps for better touch targets */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .logo-image {
+    max-width: 50px; /* Smaller logo on very small screens */
+  }
+
+  .contactlogo {
+    top: -30px; /* Adjust logo position */
+  }
+
+  span.contents {
+    font-size: 12px; /* Slightly smaller text for better fit */
+  }
+
+  .social_links {
+    gap: 8px; /* Compact icons on very small screens */
+  }
 }

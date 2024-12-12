@@ -1,0 +1,161 @@
+.brunch_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 55px;
+    background-color: black;
+    position: relative;
+
+}
+.content{
+    border:1px solid #FFFFFF;
+    padding: 30px 70px;
+    margin: 80px 0px;
+  
+}
+
+.content h1{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 111.15px;
+    text-shadow: 4px 3px #800020;
+ 
+}
+.dishes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+    margin: 30px 0px;
+    position: relative;
+}
+.dish_details h3{
+    color: white;
+    font-weight: 300;
+    font-size: 26px;
+    Line-height:38.53px;
+    
+   
+}
+.dish_details p{
+    max-width: 390px;
+    color: #FFFFFFBF;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Kelly Slab", sans-serif;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between the lines and the heading */
+    margin-bottom: 20px;
+}
+.title-container .line {
+    width: 70px;/* Makes the line stretch dynamically */
+    height: 3px; /* Thickness of the line */
+    background-color: #857878; /* Color of the line */
+}
+.cocktail_img{
+    position: absolute;
+    top: -75px;
+    left: 100px;
+}
+.cocktails{
+    position: absolute;
+    bottom: 48px;
+    right: 150px;
+}
+.left_frame{
+    position: absolute;
+    bottom: -148px;
+    left: -248px;
+}
+.right_frame{
+    position: absolute;
+    right: -250px;
+    bottom: -135px;
+}
+
+
+@media (max-width: 900px) {
+    .cocktail_img {
+        position: relative;
+        top: 123px;
+        left: -277px;
+        /* width: 160px; */
+        max-width: 151px;
+    }
+    .cocktails {
+        position: relative;
+        bottom: 157px;
+        right: -184px;
+    }
+  
+    .left_frame,
+    .right_frame {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 130px;
+      display: none;
+    }
+  
+    .title-container h1 {
+      font-size: 28px;
+    }
+  
+    .dishes {
+      grid-template-columns: 1fr; /* Stack dishes vertically */
+      gap: 20px;
+    }
+  
+    .dish_details h3 {
+      font-size: 18px;
+    }
+  
+    .dish_details p {
+      font-size: 14px;
+    }
+  }
+  
+  /* For screens smaller than 600px */
+  @media (max-width: 600px) {
+    .cocktail_img {
+        position: relative;
+        top: 65px;
+        left: -120px;
+        width: 150px;
+    }
+  
+    .cocktails {
+        position: relative;
+        bottom: 98px;
+        right: -95px;
+        width: 120px;
+    }
+  
+    .content {
+      padding: 10px;
+      margin: 30px 0;
+    }
+  
+    .content h1 {
+      font-size: 24px;
+      line-height: 35px;
+    }
+  
+    .dish_details h3 {
+      font-size: 16px;
+    }
+  
+    .dish_details p {
+      font-size: 12px;
+    }
+    .brunch_section{
+        margin: 0;
+        padding: 0;
+    }
+  }

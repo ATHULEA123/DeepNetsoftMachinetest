@@ -13,14 +13,14 @@ exports.getProducts = async (req, res) => {
 
 exports.addProduct = async (req, res) => {
 
-  const { productName, price, description } = req.body;
+  const { productName, price, description ,type} = req.body;
   console.log(req.body,"ghjfhjfhg");
   if (!productName || !price || !description) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
   try {
-    const newProduct = new Product({ productName, price, description });
+    const newProduct = new Product({ productName, price, description,type });
     await newProduct.save();
     res.status(201).json({ message: 'Product added successfully', product: newProduct });
   } catch (error) {

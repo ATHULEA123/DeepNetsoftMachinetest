@@ -14,8 +14,9 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  type:{
+  type: {
     type: String,
+    enum: ['food', 'drinks', 'brunch'], // Restrict to specific types
     required: true,
   }
 });
